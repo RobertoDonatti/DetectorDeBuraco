@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  treinamento:
+    build: .
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - /caminho/no/servidor/train:/app/train
+      - /caminho/no/servidor/valid:/app/valid
+      - /caminho/no/servidor/test:/app/test
+      - /caminho/no/servidor/runs:/app/runs
+    shm_size: '8gb'
+    restart: "no"

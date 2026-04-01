@@ -1,0 +1,39 @@
+# Dataset - imagens e labels (grandes volumes de dados)
+train/images/
+train/labels/
+train/labels_backup/
+valid/images/
+valid/labels/
+valid/labels_backup/
+test/images/
+test/labels/
+test/labels_backup/
+backup_labels/
+dataset_novo/
+
+# Resultados de treinamento YOLOv8
+runs/
+
+# Modelo pré-treinado (binário grande)
+yolov8s.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+runs/
+dataset_novo/
+__pycache__/
+*.pyc
+.git/
+backup_labels/
+train/
+valid/
+test/
+.venv/
+*.mp4

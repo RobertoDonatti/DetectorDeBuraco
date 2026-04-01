@@ -1,0 +1,14 @@
+path: H:/Dev/OlhaBuraco/dataset_novo
+train: H:/Dev/OlhaBuraco/train/images
+val: H:/Dev/OlhaBuraco/valid/images
+test: H:/Dev/OlhaBuraco/test/images
+
+nc: 6
+names: ['buraco', 'remendo', 'rachadura crocodilo', 'rachadura longitudinal', 'rachadura obliqua', 'rachadura transversal']
+
+roboflow:
+  workspace: udesc-mgjnx
+  project: uav-pdd2023-2qur7-pvhzo
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/udesc-mgjnx/uav-pdd2023-2qur7-pvhzo/dataset/1
