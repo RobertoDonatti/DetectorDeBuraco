@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -6,22 +6,18 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
     libglib2.0-0 \
+    libgomp1 \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Dependências Python
-RUN pip install --no-cache-dir \
-    ultralytics \
-    opencv-python-headless \
-    torch torchvision \
-    numpy
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Copia apenas os scripts (dataset fica nos volumes)
 COPY train.py .
 COPY detect.py .
 COPY data.yaml .
 COPY RemapLabel.py .
 COPY ColetaDataset.py .
 
-# Comando padrão
 CMD ["python", "train.py"]
